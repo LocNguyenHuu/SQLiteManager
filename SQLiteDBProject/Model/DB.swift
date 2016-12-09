@@ -32,4 +32,44 @@ public class DB {
                           "colRealStrict REAL check(typeof('colRealStrict') = 'real'), \n "   +
                           "colIntStrict INTEGER check(typeof('colInStrict') = 'integer'), \n" +
                           "colTextStrict TEXT check(typeof('colTextStrict') = 'text', \n"
+  let viewDef: String =
+                          "CREATE VIEW IF NOT EXIST "                                                               +
+                          "viewname AS SELECT * FROM main.tablename "                                               +
+                          "or CREATE VIEW viewname AS SELECT columns FROM main.tablename where column equals value " +
+                          "or CREATE temp (or temporary) VIEW viewname AS SELECT columns FROM "                     +
+                          "main.tablename"
+  
+  let indexDef: String = "CREATE UNIQUE INDEX IF NOT EXIST main.indexname " +
+                         "ON TABLE tablename (Column definition) WHERE where clause"
+  
+  let triggerDef: String = "CREATE TRIGGER triggername AFTER INSERT ON main.table " +
+                           "FOR EACH ROW " +
+                           "WHEN (columnname) some condition" +
+                           "BEGIN "  +
+                           "update Book set Royalties = Sales * .15; " +
+                           "END"
+  
+  init() {
+    
+  }
+  
+  func selectDBSchemaStructure(_ objectName: String) -> String {
+    
+    var def: String = ""
+    if (!objectName.isEmpty) {
+      def = "Select type, name, tbl_name, " +
+            "sql From main.sqlite_master Where name='\(objectName)'"
+    } else {
+      def = "Select type, name, tbl_name From main.sqlite_master; "
+    }
+    return def
+  }
+  
+  func selectDBSchemaListByType(_ typeName: String) -> String {
+    var def: String = ""
+    if (!typeName.isEmpty) {
+      def = "Select name From main.sqlite_master Where type='\(typeName)';"
+    }
+    return def
+  }
 }

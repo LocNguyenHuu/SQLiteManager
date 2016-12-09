@@ -18,6 +18,7 @@
 		27D3D0571DF83C7300B0AACA /* SQLiteDBProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D3D0561DF83C7300B0AACA /* SQLiteDBProjectUITests.swift */; };
 		27D3D06C1DF83CF300B0AACA /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 27D3D06B1DF83CF300B0AACA /* libsqlite3.tbd */; };
 		27D3D06F1DF83DB800B0AACA /* DBMgrDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D3D06E1DF83DB800B0AACA /* DBMgrDAO.swift */; };
+		27E18DFE1DFAFD8200D8FCDC /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E18DFD1DFAFD8200D8FCDC /* Enums.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		27D3D06B1DF83CF300B0AACA /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		27D3D06D1DF83D0D00B0AACA /* Sqlite3Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Sqlite3Bridge.h; sourceTree = "<group>"; };
 		27D3D06E1DF83DB800B0AACA /* DBMgrDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DBMgrDAO.swift; path = Controllers/DBMgrDAO.swift; sourceTree = "<group>"; };
+		27E18DFD1DFAFD8200D8FCDC /* Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Enums.swift; path = Utils/Enums.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +186,7 @@
 		27D3D0691DF83CE300B0AACA /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				27E18DFD1DFAFD8200D8FCDC /* Enums.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -337,6 +340,7 @@
 				27D3D06F1DF83DB800B0AACA /* DBMgrDAO.swift in Sources */,
 				27D3D0371DF83C7200B0AACA /* MasterViewController.swift in Sources */,
 				27C312D91DF97D4600FBECD7 /* DB.swift in Sources */,
+				27E18DFE1DFAFD8200D8FCDC /* Enums.swift in Sources */,
 				27D3D0351DF83C7200B0AACA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
